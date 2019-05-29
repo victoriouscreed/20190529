@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Learning_BOM</title>
+<script>
+    var x = "Welcome";
+
+    window.alert(window.x);
+    function next_page(){
+        window.history.forward();
+    }
+</script>
+</head>
+
+<body>
+    <h1>BOM</h1>
+    <h3 id="Screen01"></h3>
+    <h3 id="Screen02"></h3>
+    <h3 id="Screen03"></h3>
+    <h3 id="Screen04"></h3>
+
+<input type="button" value="nextPage" onclick="next_page()">
+
+<h3 id="Screen06"></h3>
+    <script>
+        document.getElementById("Screen01").innerHTML = "瀏覽器高度:" + window.innerHeight;
+        document.getElementById("Screen02").innerHTML = "瀏覽器寬度:" + window.innerWidth;
+        document.getElementById("Screen03").innerHTML = "螢幕高度:" + screen.height;
+        document.getElementById("Screen04").innerHTML = "螢幕寬度:" + window.screen.width;
+        document.getElementById("Screen06").innerHTML = "網址的主機名稱:" + location.hostname;
+    </script>
+</body>
+</html>
